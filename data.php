@@ -15,9 +15,9 @@ function database_connect() {
     }
 }
 if(isset($_POST['submit'])){
-    $A=$_POST['A'];
+    $thesilenceofthelambs=$_POST['thesilenceofthelambs'];
     $query="INSERT INTO `questions`(`questions`) 
-    VALUES ('A')";
+    VALUES ('thesilenceofthelambs')";
     try {
         $result = mysqli_query($connection, $query);
         if($result){
