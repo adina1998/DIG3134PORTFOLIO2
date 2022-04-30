@@ -10,16 +10,16 @@ function database_connect() {
     $password = "";
     $database = "horror_quiz";
 
-    if($connection == null) {
+    // if($connection == null) {
         $connection = mysqli_connect($server, $username, $password, $database);
-    }
+    // }
 }
 if(isset($_POST['submit'])){
     $thesilenceofthelambs=$_POST['thesilenceofthelambs'];
     $query="INSERT INTO `questions`(`questions`) 
     VALUES ('thesilenceofthelambs')";
     try {
-        $result = mysqli_query(NULL, $connection, $query);
+        $result = mysqli_query($connection, $query);
         if($result){
             if(mysqli_affected_rows($connection)>0){
                 echo "data submitted";
