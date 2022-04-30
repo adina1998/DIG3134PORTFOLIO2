@@ -15,7 +15,7 @@ function database_connect() {
     }
 }
 if(isset($_POST['submit'])){
-    $1991=$_POST['1991'];
+    $1991=$_POST['$1991'];
     $query="INSERT INTO `questions`(`questions`) 
     VALUES ('1991')";
     try {
