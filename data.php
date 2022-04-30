@@ -19,7 +19,7 @@ if(isset($_POST['submit'])){
     $query="INSERT INTO `questions`(`questions`) 
     VALUES ('thesilenceofthelambs')";
     try {
-        $result = mysqli_query($connection, $query);
+        $result = mysqli_query(NULL, $connection, $query);
         if($result){
             if(mysqli_affected_rows($connection)>0){
                 echo "data submitted";
