@@ -49,7 +49,7 @@ if(isset($_POST['submit'])){
     }
  if (isset($_POST['Check'])){
      $queryfour = "select value from compare order by id desc limit 1";
-     $resultfour = mysqli_query($connection, $queryfour)
+     $resultfour = mysqli_query($connection, $queryfour){
      if($resultfour){
          if(mysqli_num_rows($resultfour)){
              while($rows = mysqli_fetch_array($resultfour)){
