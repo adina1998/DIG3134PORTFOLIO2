@@ -33,7 +33,7 @@ if(isset($_POST['submit'])){
     }
     $querytwo = "select question.question, answers.answer from answers inner join
     (select question from questions order by id desc limit 1)
-    as question on question.question = answers.answer"
+    as question on question.question = answers.answer";
     $resulttwo = mysqli_query($connection, $querytwo);
     if($resulttwo){
         if(mysqli_affected_rows($connection)>0){
