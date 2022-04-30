@@ -25,7 +25,7 @@ if(isset($_POST['submit'])){
                 echo "data submitted";
             }
             else {
-                echo "data not submitted"
+                echo "data not submitted";
             }
         }
     } catch(Exception $ex){
@@ -37,12 +37,10 @@ if(isset($_POST['submit'])){
     $resulttwo = mysqli_query($connection, $querytwo);
     if($resulttwo){
         if(mysqli_affected_rows($connection)>0){
-            $querythree="insert into compare (value) values 
-            ('correct')";
+            $querythree="INSERT INTO `compare`(`value`) VALUES ('correct')";
             $resultthree=mysqli_query($connection,$querythree);
         }else{
-                $querythree = "into into compare (value) values
-                ('incorrect')";
+                $querythree = "INSERT INTO `compare`(`value`) VALUES ('incorrect')";
                 $resultthree=mysqli_query($connection, $querythree);
 
             }
