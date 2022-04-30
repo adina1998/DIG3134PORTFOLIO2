@@ -1,12 +1,13 @@
--- CREATE DATABASE `movie`;
--- USE `movie`;
+CREATE DATABASE `horror_quiz`;
+USE `horror_quiz`;
 
--- CREATE TABLE `titles` (
---   `id` int(11) AUTO_INCREMENT,
---   `title` varchar(255),
---   `year` varchar(255),
---   PRIMARY KEY(`id`)
--- );
+CREATE TABLE `questions` (
+  `id` int(11) AUTO_INCREMENT,
+  `question` varchar(255),
+  `question2` varchar(255),
+  `question3` varchar(255),
+  PRIMARY KEY(`id`)
+);
 
--- INSERT INTO `movie` (`id`, `title`, `year`) VALUES
--- (1, 'silence of the lambs', '$2y$10$jhSIk2N5BnkEEzgEBWQDw.AUQIEcrH8V0AcNLfW2nkjTAH2WgAAlW');
+INSERT INTO `horror_quiz` (`id`, `question`, `question2`, `question3`) VALUES
+(1, 'silenceofthelambs', 'Anthony Hopkins');
