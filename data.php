@@ -18,7 +18,7 @@ function database_connect() {
             echo("error");
         }
     // }
-}
+
 if(isset($_POST['submit'])){
     $thesilenceofthelambs=$_POST['thesilenceofthelambs'];
     $query="INSERT INTO `questions`(`questions`) 
