@@ -2,7 +2,7 @@
 
 $connection = null;
 
-function database_connect() {
+function data_connect() {
     global $connection;
 
     $server = "localhost";
@@ -15,7 +15,7 @@ function database_connect() {
     }
 }
 
-function database_verifyAnswer($question, $answer) {
+function data_verifyAnswer($question, $answer) {
     // Use the global connection
     global $connection;
 
@@ -34,7 +34,7 @@ function database_verifyAnswer($question, $answer) {
         // If $row is not null, it found row data.
         if($row != null) {
             // Verify password against saved hash
-            if(question_verify($question, $row["results"])) {
+            if(question_verifyAnswer($question, $row["results"])) {
                 $status = true;
             }}
         }
@@ -43,7 +43,7 @@ function database_verifyAnswer($question, $answer) {
     return $status;
 }
 
-function database_close() {
+function data_close() {
     global $connection;
     
     if($connection != null) {
