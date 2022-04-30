@@ -11,7 +11,13 @@ function database_connect() {
     $database = "horror_quiz";
 
     // if($connection == null) {
+    try{
+
         $connection = mysqli_connect($server, $username, $password, $database);
+        catch (MySQLi_Sql_Exception $ex)
+        {
+            echo("error");
+        }
     // }
 }
 if(isset($_POST['submit'])){
