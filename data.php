@@ -12,9 +12,8 @@ function database_connect() {
 
     // if($connection == null) {
     try{
-
         $connection = mysqli_connect($server, $username, $password, $database);
-        catch (MySQLi_Sql_Exception $ex)
+        catch(MySQLi_Sql_Exception $ex)
         {
             echo("error");
         }
