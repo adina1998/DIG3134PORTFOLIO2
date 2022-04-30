@@ -16,8 +16,10 @@ function database_connect() {
 }
 if(isset($_POST['submit'])){
     $A=$_POST['A'];
+    $C=$_POST['C'];
+    $C=$_POST['C'];
     $query="INSERT INTO `questions`(`questions`) 
-    VALUES ('A')";
+    VALUES ('A', 'C', 'C')";
     try {
         $result = mysqli_query($connection, $query);
         if($result){
