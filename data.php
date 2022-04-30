@@ -54,7 +54,7 @@ if(isset($_POST['submit'])){
          if(mysqli_num_rows($resultfour)){
              while($rows = mysqli_fetch_array($resultfour, MYSQL_BOTH))
              {
-                 echo($rows['value']."<br>")
+                 echo($rows['value']."<br>");
              }
          }
      }else{
