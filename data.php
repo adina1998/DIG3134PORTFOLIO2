@@ -1,18 +1,19 @@
 <?php
 
-// $connection = null;
+$connection = null;
 
-// function database_connect() {
-//     global $connection;
+function database_connect() {
+    global $connection;
 
     $server = "localhost";
     $username = "root";
     $password = "";
     $database = "horror_quiz";
 
-    // if($connection == null) {
+    if($connection == null) {
     try{
         $connection = mysqli_connect($server, $username, $password, $database);
+    }
         catch(MySQLi_Sql_Exception $ex)
         {
             echo("error");
@@ -64,6 +65,6 @@ if(isset($_POST['submit'])){
          echo "error in result";
      }
  }   
-}
+}}
 
 ?>
