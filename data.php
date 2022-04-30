@@ -1,9 +1,9 @@
 <?php
 
-$connection = null;
+// $connection = null;
 
-function database_connect() {
-    global $connection;
+// function database_connect() {
+//     global $connection;
 
     $server = "localhost";
     $username = "root";
