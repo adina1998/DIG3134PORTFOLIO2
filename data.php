@@ -15,9 +15,9 @@ function database_connect() {
     }
 }
 if(isset($_POST['submit'])){
-    $1991=$_POST['$1991'];
+    $A=$_POST['A'];
     $query="INSERT INTO `questions`(`questions`) 
-    VALUES ('1991')";
+    VALUES ('A')";
     try {
         $result = mysqli_query($connection, $query);
         if($result){
@@ -31,8 +31,9 @@ if(isset($_POST['submit'])){
     } catch(Exception $ex){
         echo ("error in connection");
     }
-    $querytwo = "select question.question, answer.answer from answer inner join (select question from question
-    order by id desc limit 1) as question on question.question = answer.answer"
+    $querytwo = "select question.question, answers.answer from answers inner join
+    (select question from questions order by id desc limit 1)
+    as question on question.question = answers.answer"
     $resulttwo = mysqli_query($connection, $querytwo);
     if($resulttwo){
         if(mysqli_affected_rows($connection)>0){
