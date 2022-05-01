@@ -10,4 +10,4 @@ CREATE TABLE `questions` (
 );
 
 INSERT INTO `horror_quiz` (`id`, `question`, `question2`, `question3`) VALUES
-(1, 'silenceofthelambs', 'Anthony Hopkins');
+(1,`value`, `value2`, `value3`);

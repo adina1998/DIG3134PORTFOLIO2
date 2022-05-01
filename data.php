@@ -1,24 +1,15 @@
 <?php
 
-$connection = null;
-
-function data_connect() {
-    global $connection;
-
     $server = "localhost";
     $username = "root";
     $password = "";
     $database = "horror_quiz";
 
-    if($connection == null) {
-        $connection = mysqli_connect($server, $username, $password, $database);
-    }
 }
-
-    try{
+    if{
         $connection = mysqli_connect($server, $username, $password, $database);
     }
-        catch(MySQLi_Sql_Exception $ex)
+        else(MySQLi_Sql_Exception $ex)
         {
             echo("error");
         }
@@ -26,7 +17,7 @@ function data_connect() {
 if(isset($_POST['submit'])){
     $thesilenceofthelambs=$_POST['thesilenceofthelambs'];
     $query="INSERT INTO `questions`(`questions`) 
-    VALUES ('thesilenceofthelambs')";
+    VALUES ('answers')";
     try {
         $result = mysqli_query($connection, $query);
         if($result){
@@ -70,12 +61,4 @@ if(isset($_POST['submit'])){
  }   
 }
 }
-function data_close() {
-    global $connection;
-    
-    if($connection != null) {
-     mysqli_close($connection);
-    }
-}
-
 ?>
