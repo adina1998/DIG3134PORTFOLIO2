@@ -5,7 +5,7 @@ $answers = array(
 $questions = array(
     array('id' => '1','question1' => ' Who is the male lead actor in the movie above?','question2' => 'Who was the original Ghost face?','question3' => 'Who played the mother in the film above?')
   );
-  
+
   
 
 $server = "localhost";
@@ -47,22 +47,22 @@ if(isset($_POST['submit'])){
     $resulttwo = mysqli_query($connection, $querytwo);
     if($resulttwo){
     if(mysqli_affected_rows($connection)>0){
-        $querythree="INSERT INTO `compare`(`value`) VALUES ('correct')";
+        $querythree="INSERT INTO `answer`(`answer1`) VALUES ('correct')";
         $resultthree=mysqli_query($connection,$querythree);
         }else{
-        $querythree = "INSERT INTO `compare`(`value`) VALUES ('incorrect')";
+        $querythree = "INSERT INTO `answer`(`answer`) VALUES ('incorrect')";
         $resultthree=mysqli_query($connection, $querythree);
     
         }
     }
     if (isset($_POST['Check'])){
-    $queryfour = "select value from compare order by id desc limit 1";
+    $querythree = "select answer from answers order by id desc limit 1";
     $resultfour = mysqli_query($connection, $queryfour);
         if($resultfour){
         if(mysqli_num_rows($resultfour)){
             while($rows = mysqli_fetch_array($resultfour))
         {
-            echo($rows['value']."<br>");
+            echo($rows['answer']."<br>");
         }
     }
         }else{
