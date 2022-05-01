@@ -138,7 +138,7 @@ try{
                 <tr><input type="radio" name="brucewillis" value="brucewillis">Bruce Willis</tr>
                 <br>
                 <br>
-                <td> <input type="submit" name="submit" value="submit"> </td>
+                <!-- <td> <input type="submit" name="submit" value="submit"> </td> -->
                 <td> <input type="submit" name="Check" value="Check"> </td>                
                 
                 <br>
