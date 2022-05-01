@@ -18,7 +18,7 @@ function database_connect() {
 }
 
     try{
-        $connection = mysqli_connect($server, $username, $password, $database);
+       
     }
         catch(MySQLi_Sql_Exception $ex)
         {
