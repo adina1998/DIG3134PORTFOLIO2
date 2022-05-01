@@ -1,12 +1,16 @@
 <?php
 $server = "localhost";
-    $username = "root";
-    $password = "";
-    $database = "horror_quiz";
+$username = "root";
+$password = "";
+$database = "horror_quiz";
 
-    try{
-        $connection = mysqli_connect($server, $username, $password, $database);
+try{
+    $connection = mysqli_connect($server, $username, $password, $database);
+} catch(MySQLi_Sql_Exception $ex)
+    {
+    echo("error");
     }
+}   
 
 if(isset($_POST['submit'])){
     $anthonyhopkins=$_POST['anthonyhopkins'];
