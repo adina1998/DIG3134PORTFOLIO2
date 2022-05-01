@@ -31,7 +31,7 @@ function database_verifyAnswer($question, $answer){
         // If $row is not null, it found row data.
         if($row != null) {
             // Verify password against saved hash
-            if(question_verify($question, $row["answer"])) {
+            if(question_verify($question, $row["connection"])) {
                 $status = true;
             }
         }
