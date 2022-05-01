@@ -2,7 +2,7 @@
 
 $connection = null;
 
-function database_connect() {
+function data_connect() {
     global $connection;
 
     $server = "localhost";
@@ -16,15 +16,7 @@ function database_connect() {
         $connection = mysqli_connect($server, $username, $password, $database);
     }
 }
-
-    try{
-       
-    }
-        catch(MySQLi_Sql_Exception $ex)
-        {
-            echo("error");
-        }
-
+function data_answerQuiz(){
 if(isset($_POST['submit'])){
     $anthonyhopkins=$_POST['anthonyhopkins'];
     $query= "INSERT INTO `questions`(`questions`) 
@@ -70,7 +62,7 @@ if(isset($_POST['submit'])){
          echo "error in result";
      }
  }   
-}
+}}
 
 function database_close() {
     // user global connection
