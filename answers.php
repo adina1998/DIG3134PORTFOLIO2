@@ -1,4 +1,7 @@
 <?php
+
+function database_verifyAnswer($question, $answer){
+
 if(isset($_POST['submit'])){
     $anthonyhopkins=$_POST['anthonyhopkins'];
     $query= "INSERT INTO `questions`(`questions`) 
