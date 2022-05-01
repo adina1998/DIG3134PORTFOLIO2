@@ -12,7 +12,7 @@
         {
             echo("error");
         }
-    }
+
 if(isset($_POST['submit'])){
     $answers=$_POST['$answers'];
     $query="INSERT INTO `questions`(`questions`) 
