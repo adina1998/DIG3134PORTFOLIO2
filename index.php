@@ -21,40 +21,40 @@ try{
     }
   
 
-if(isset($_POST['submit'])){
-    $anthonyhopkins=$_POST['anthonyhopkins'];
-    $query= "INSERT INTO `questions`(`questions`) 
-    VALUES ('answer1')";
+// if(isset($_POST['submit'])){
+//     $anthonyhopkins=$_POST['anthonyhopkins'];
+//     $query= "INSERT INTO `questions`(`questions`) 
+//     VALUES ('answer1')";
 
-    try {
-    $result = mysqli_query($connection, $query);
-        if($result){
-            if(mysqli_affected_rows($connection)>0){
-                echo "data submitted";
-            }
-            else {
-                echo "data not submitted";
-            }
-        }
-    } catch(Exception $ex){
-        echo ("error in connection");
-    }
+//     try {
+//     $result = mysqli_query($connection, $query);
+//         if($result){
+//             if(mysqli_affected_rows($connection)>0){
+//                 echo "data submitted";
+//             }
+//             else {
+//                 echo "data not submitted";
+//             }
+//         }
+//     } catch(Exception $ex){
+//         echo ("error in connection");
+//     }
 
         
-    $querytwo = "select question.question, answers.answer from answers inner join
-    (select question from questions order by id desc limit 1)
-    as question on question.question = answers.answer";
-    $resulttwo = mysqli_query($connection, $querytwo);
-    if($resulttwo){
-    if(mysqli_affected_rows($connection)>0){
-        $querythree="INSERT INTO `answer`(`answer1`) VALUES ('correct')";
-        $resultthree=mysqli_query($connection,$querythree);
-        }else{
-        $querythree = "INSERT INTO `answer`(`answer`) VALUES ('incorrect')";
-        $resultthree=mysqli_query($connection, $querythree);
+//     $querytwo = "select question.question, answers.answer from answers inner join
+//     (select question from questions order by id desc limit 1)
+//     as question on question.question = answers.answer";
+//     $resulttwo = mysqli_query($connection, $querytwo);
+//     if($resulttwo){
+//     if(mysqli_affected_rows($connection)>0){
+//         $querythree="INSERT INTO `answer`(`answer1`) VALUES ('correct')";
+//         $resultthree=mysqli_query($connection,$querythree);
+//         }else{
+//         $querythree = "INSERT INTO `answer`(`answer`) VALUES ('incorrect')";
+//         $resultthree=mysqli_query($connection, $querythree);
     
-        }
-    }
+//         }
+//     }
     if (isset($_POST['Check'])){
     $querythree = "select answer from answers order by id desc limit 1";
     $resultfour = mysqli_query($connection, $queryfour);
