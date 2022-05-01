@@ -56,8 +56,10 @@ try{
 //         }
 //     }
     if (isset($_POST['Check'])){
-    $query = "INSERT INTO `questions`(`questions`) 
-    //     VALUES ('answers')";
+    $query = "SELECT `answer1`FROM `questions`(`questions1`) 
+    VALUES ('answer1')";
+    // SELECT `id`, `answer1`, `answer2`, `answer3` FROM `answers` WHERE 1
+    // SELECT `id`, `question1`, `question2`, `question3` FROM `questions` WHERE 1
     $result = mysqli_query($connection, $query);
         if($result){
         if(mysqli_num_rows($result)){
