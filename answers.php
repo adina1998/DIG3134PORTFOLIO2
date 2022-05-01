@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 include("data.php");
 
 function data_answerNextQuestion() {
@@ -22,4 +22,4 @@ function data_answerNextQuestion() {
 }
 
 
-?>
+?> -->
