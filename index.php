@@ -69,7 +69,7 @@ try{
             echo "error in result";
         }
      }   
-}
+
 ?>
 
 <!DOCTYPE html>
