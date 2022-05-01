@@ -56,11 +56,11 @@ try{
 //         }
 //     }
     if (isset($_POST['Check'])){
-    $querythree = "select answer from answers order by id desc limit 1";
-    $resultfour = mysqli_query($connection, $queryfour);
-        if($resultfour){
-        if(mysqli_num_rows($resultfour)){
-            while($rows = mysqli_fetch_array($resultfour))
+    $query = "select answer from answers order by id desc limit 1";
+    $result = mysqli_query($connection, $query);
+        if($result){
+        if(mysqli_num_rows($result)){
+            while($rows = mysqli_fetch_array($result))
         {
             echo($rows['answer']."<br>");
         }
