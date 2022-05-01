@@ -15,7 +15,22 @@ function data_connect() {
     }
 }
 
-function data_verifyAnswer($question, $answer) {
+function data_answerNextQuestion($questions, $answers) {
+    // Use the global connection
+    global $connection;
+
+    if($connection != null) {
+        // Overwrite the existing password value as a hash
+        $questions = questions_hash($questions, );
+        // Insert username and hashed password
+        mysqli_query($connection, "INSERT INTO `questions`(`questions`)
+        VALUES ('answers')
+       ");
+    }
+}
+
+
+function data_verifyAnswer($questions, $answers) {
     // Use the global connection
     global $connection;
 
@@ -34,7 +49,7 @@ function data_verifyAnswer($question, $answer) {
         // If $row is not null, it found row data.
         if($row != null) {
             // Verify password against saved hash
-            if(question_verifyAnswer($question, $row["results"])) {
+            if(question_verifyAnswer($questions, $row["results"])) {
                 $status = true;
             }}
         }
