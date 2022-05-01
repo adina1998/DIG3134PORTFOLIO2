@@ -63,7 +63,7 @@ try{
         if(mysqli_num_rows($result)){
             while($rows = mysqli_fetch_array($result))
         {
-            echo($rows['answer']);
+            echo($rows['answers']);
         }
     }
         }else{
