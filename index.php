@@ -2,6 +2,11 @@
 $answers = array(
     array('id' => '1','answer1' => 'anthonyhopkins','answer2' => 'skeetulrich','answer3' => 'tonicollete')
   );
+$questions = array(
+    array('id' => '1','question1' => ' Who is the male lead actor in the movie above?','question2' => 'Who was the original Ghost face?','question3' => 'Who played the mother in the film above?')
+  );
+  
+  
 
 $server = "localhost";
 $username = "root";
