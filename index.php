@@ -1,4 +1,8 @@
 <?php
+$answers = array(
+    array('id' => '1','answer1' => 'anthonyhopkins','answer2' => 'skeetulrich','answer3' => 'tonicollete')
+  );
+
 $server = "localhost";
 $username = "root";
 $password = "root";
