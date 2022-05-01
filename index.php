@@ -47,7 +47,7 @@ if(isset($_POST['submit'])){
             echo "error in result";
         }
      }   
-    }}
+    }
 ?>
 
 <!DOCTYPE html>
