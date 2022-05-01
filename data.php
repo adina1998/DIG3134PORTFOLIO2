@@ -1,11 +1,14 @@
 <?php
+include("index.html");
+$answers= '$answers';
+$connection = null;
 
     $server = "localhost";
     $username = "root";
     $password = "";
     $database = "horror_quiz";
 
-    try{
+    try($connection == null) {
         $connection = mysqli_connect($server, $username, $password, $database);
     }
         catch(MySQLi_Sql_Exception $ex)
