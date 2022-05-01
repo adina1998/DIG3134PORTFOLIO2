@@ -1,7 +1,7 @@
 <?php
     $server = "localhost";
     $username = "root";
-    $password = "root";
+    $password = "";
     $database = "horror_quiz";
 
     try{
