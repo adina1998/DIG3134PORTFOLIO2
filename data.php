@@ -1,8 +1,21 @@
 <?php
+
+$connection = null;
+
+function database_connect() {
+    global $connection;
+
     $server = "localhost";
     $username = "root";
     $password = "";
     $database = "horror_quiz";
+
+
+
+    if($connection == null) {
+        $connection = mysqli_connect($server, $username, $password, $database);
+    }
+}
 
     try{
         $connection = mysqli_connect($server, $username, $password, $database);
@@ -57,6 +70,15 @@ if(isset($_POST['submit'])){
          echo "error in result";
      }
  }   
+}
+
+function database_close() {
+    // user global connection
+    global $connection;
+
+    if($connection != null) {
+        mysqli_close($connection);
+    }
 }
 
 ?>
