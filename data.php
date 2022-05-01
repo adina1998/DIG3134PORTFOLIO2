@@ -48,7 +48,7 @@ if(isset($_POST['submit'])){
      $resultfour = mysqli_query($connection, $queryfour);
      if($resultfour){
          if(mysqli_num_rows($resultfour)){
-             while($rows = mysqli_fetch_array($resultfour, MYSQL_BOTH))
+             while($rows = mysqli_fetch_array($resultfour))
              {
                  echo($rows['value']."<br>");
              }
