@@ -24,7 +24,7 @@ try{
 if(isset($_POST['submit'])){
     $anthonyhopkins=$_POST['anthonyhopkins'];
     $query= "INSERT INTO `questions`(`questions`) 
-    VALUES ('anthonyhopkins')";
+    VALUES ('answer1')";
 
     try {
     $result = mysqli_query($connection, $query);
