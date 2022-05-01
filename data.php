@@ -5,10 +5,10 @@
     $password = "";
     $database = "horror_quiz";
 
-    if{
+    try{
         $connection = mysqli_connect($server, $username, $password, $database);
     }
-        else(MySQLi_Sql_Exception $ex)
+        catch(MySQLi_Sql_Exception $ex)
         {
             echo("error");
         }
