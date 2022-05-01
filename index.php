@@ -56,7 +56,8 @@ try{
 //         }
 //     }
     if (isset($_POST['Check'])){
-    $query = "select answer from answers order by id desc limit 1";
+    $query = "INSERT INTO `questions`(`questions`) 
+    //     VALUES ('answers')";
     $result = mysqli_query($connection, $query);
         if($result){
         if(mysqli_num_rows($result)){
