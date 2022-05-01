@@ -2,7 +2,7 @@
 
 $connection = null;
 
-function data_connect() {
+function database_connect() {
     global $connection;
 
     $server = "localhost";
@@ -16,7 +16,7 @@ function data_connect() {
         $connection = mysqli_connect($server, $username, $password, $database);
     }
 }
-function data_answerQuiz(){
+function database_answerQuiz(){
 if(isset($_POST['submit'])){
     $anthonyhopkins=$_POST['anthonyhopkins'];
     $query= "INSERT INTO `questions`(`questions`) 
