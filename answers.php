@@ -16,9 +16,7 @@ if(isset($_POST['submit'])){
                 echo "data not submitted";
             }
         }
-    } catch(Exception $ex){
-        echo ("error in connection");
-    }
+    } 
     $querytwo = "select question.question, answers.answer from answers inner join
     (select question from questions order by id desc limit 1)
     as question on question.question = answers.answer";
