@@ -1,11 +1,7 @@
 <?php
-$answers= '$answers';
-
-$connection = null;
-
     $server = "localhost";
     $username = "root";
-    $password = "";
+    $password = "root";
     $database = "horror_quiz";
 
     try{
@@ -17,9 +13,9 @@ $connection = null;
         }
 
 if(isset($_POST['submit'])){
-    $answers=$_POST['$answers'];
-    $query="INSERT INTO `questions`(`questions`) 
-    VALUES ('answers')";
+    $anthonyhopkins=$_POST['anthonyhopkins'];
+    $query= "INSERT INTO `questions`(`questions`) 
+    VALUES ('anthonyhopkins')";
     try {
         $result = mysqli_query($connection, $query);
         if($result){
