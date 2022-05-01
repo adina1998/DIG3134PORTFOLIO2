@@ -4,10 +4,15 @@ $server = "localhost";
     $password = "";
     $database = "horror_quiz";
 
+    try{
+        $connection = mysqli_connect($server, $username, $password, $database);
+    }
+
 if(isset($_POST['submit'])){
     $anthonyhopkins=$_POST['anthonyhopkins'];
     $query= "INSERT INTO `questions`(`questions`) 
-    VALUES (false, 'anthonyhopkins')";
+    VALUES ('anthonyhopkins')";
+
     try {
     $result = mysqli_query($connection, $query);
         if($result){
