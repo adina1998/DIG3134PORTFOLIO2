@@ -5,7 +5,6 @@
     $password = "";
     $database = "horror_quiz";
 
-}
     if{
         $connection = mysqli_connect($server, $username, $password, $database);
     }
@@ -15,7 +14,7 @@
         }
     }
 if(isset($_POST['submit'])){
-    $thesilenceofthelambs=$_POST['thesilenceofthelambs'];
+    $answers=$_POST['$answers'];
     $query="INSERT INTO `questions`(`questions`) 
     VALUES ('answers')";
     try {
